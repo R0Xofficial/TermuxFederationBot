@@ -8,7 +8,7 @@ from telegram.ext import Application, CommandHandler, MessageHandler, filters, C
 
 # Hardcoded Bot Token
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-OWNER_ID = 7923505251
+OWNER_ID = "OWNER_ID"
 
 # Persistent storage file
 DATA_FILE = "data.json"
@@ -37,7 +37,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         save_data()  # Save to the JSON file
     
     text = (
-        "🚀 <b>Welcome to Covalent Federation Bot</b>\n\n"
+        "🚀 <b>Welcome to Termux Federation Bot</b>\n\n"
         "This bot helps you report users for a Federation ban and submit appeals for unbans.\n\n"
         "📌 <b>How to Use</b>\n"
         "➖ <code>/report &lt;user_id&gt; &lt;reason&gt;</code> – Report a user for misconduct\n"
@@ -45,7 +45,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "⚠️ <b>Important Notes</b>\n"
         "❌ False reports may result in a blacklist from using this bot.\n"
         "📸 Ensure you provide a valid reason with supporting evidence.\n\n"
-        "💬 Need help? Contact us at <b>@CovalentOS</b>."
+        "💬 Need help? Contact us at <b>@TermuxLabolatory</b>."
     )
     await update.message.reply_text(text, parse_mode=ParseMode.HTML)
 
